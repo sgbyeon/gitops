@@ -16,7 +16,7 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: $ACCOUNT_ID.dkr.ecr.ap-northeast-2.amazonaws.com/webapp:green
+      - image: $ACCOUNT_ID.dkr.ecr.ap-northeast-2.amazonaws.com/webapp:red
         name: webapp
         imagePullPolicy: Always
         ports:
