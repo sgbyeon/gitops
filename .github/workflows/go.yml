@@ -2,9 +2,17 @@ name: Go
 
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - master
+    paths-ignore: 
+      - demo/*
+      - deployment/*
   pull_request:
-    branches: [ master ]
+    branches: 
+      - master
+    paths-ignore: 
+      - demo/*
+      - deployment/*
 
 jobs:
 
