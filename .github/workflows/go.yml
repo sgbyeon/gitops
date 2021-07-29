@@ -41,7 +41,7 @@ jobs:
         REPO: webapp
         TAG: latest
       run: |
-        cd ..
+        cd ../webapp/
         docker build -t $REPO .
         docker tag $REPO:$TAG $REGISTRY/$REPO:$TAG
         docker push $REGISTRY/$REPO:$TAG
