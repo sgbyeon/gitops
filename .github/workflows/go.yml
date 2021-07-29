@@ -40,7 +40,7 @@ jobs:
       env:
         REGISTRY: 628842917615.dkr.ecr.ap-northeast-2.amazonaws.com
         REPO: webapp
-        TAG: blue
+        TAG: green
       run: |
         cd webapp
         docker build -t $REPO:$TAG .
