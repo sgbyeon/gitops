@@ -33,7 +33,7 @@ jobs:
         REGISTRY: 628842917615.dkr.ecr.ap-northeast-2.amazonaws.com
         REPO: webapp
         TAG: latest
-       run: |
-         docker build -t $REPO .
-         docker tag $REPO:$TAG $REGISTRY/$REPO:$TAG
-         docker push $REGISTRY/$REPO:$TAG
+      run: |
+        docker build -t $REPO .
+        docker tag $REPO:$TAG $REGISTRY/$REPO:$TAG
+        docker push $REGISTRY/$REPO:$TAG
