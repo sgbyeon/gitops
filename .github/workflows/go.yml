@@ -19,7 +19,9 @@ jobs:
         go-version: 1.16
 
     - name: Build
-      run: cd webapp; go build -o main main.go
+      run: | 
+        cd webapp
+        go build -o main main.go
       
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -39,6 +41,7 @@ jobs:
         REPO: webapp
         TAG: latest
       run: |
+        cd ..
         docker build -t $REPO .
         docker tag $REPO:$TAG $REGISTRY/$REPO:$TAG
         docker push $REGISTRY/$REPO:$TAG
