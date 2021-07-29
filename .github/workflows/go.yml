@@ -19,7 +19,7 @@ jobs:
         go-version: 1.16
 
     - name: Build
-      run: go build -o main main.go
+      run: cd webapp; go build -o main main.go
       
     - name: Login to Amazon ECR
       uses: docker/login-action@v1
