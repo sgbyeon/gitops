@@ -6,7 +6,7 @@ on:
       - master
     paths-ignore: 
       - 'demo/**'
-      - 'deployment/**'
+      - 'webapp/deployment/**'
   pull_request:
     branches: 
       - master
